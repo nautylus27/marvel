@@ -1,0 +1,153 @@
+.comics-content-align{
+    display: inline-block;
+}
+.comics-content-shadow{
+    box-shadow: 
+    0 2px 1px -1px
+    rgba(0,0,0,.2), 0 1px 1px 0 
+    rgba(0,0,0,.14), 0 1px 3px 0 
+    rgba(0,0,0,.12);
+}
+
+.comics-type-format{
+    height: 40px;
+    vertical-align: middle;
+    padding: 10px 10px;
+}
+
+.comics-content-header{
+    display: inline-block
+}
+
+.comics-header-icon{
+    color:#FFA000;
+}
+
+.comics-header-height{
+    height: 40px;
+    background-color:#FFA000;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.comics-text-docs-size{
+    width: calc(100% - 23px)
+}
+
+.comics-text-docs{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 23px);
+}
+
+.comics-icon-color{
+    color: #00bcd4;
+}
+
+.comics-content-item{
+    vertical-align: middle;
+}
+
+.comics-type-format-color{
+    color: #727272;
+}
+
+.comics-type-format-subtitle{
+    font-size: 1.1em;
+}
+
+.comics-content-detail{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.comics-content-line-bottom{
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.comics-content-like-dislike{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.comics-content-padding{
+    padding-right: 10px;
+}
+
+.comics-content-width{
+    width: 15px;
+}
+
+.comics-content-like-action{
+    cursor: pointer;
+}
+
+.comics-message-empty-align{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.comics-text-size{
+    font-size: 15px;
+}
+
+.comics-content-icon{
+    background-color: #d0d0d0;
+    border-radius: 115%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.comics-style-icon-dislike{
+    color: #bf1a1a;
+    padding-top: 8px;
+}
+.comics-style-icon-like{
+    color: #0086b3;
+    margin-left: 8px;
+    padding-top: 4px;
+}
+
+.comics-content-border{
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+.comics-content-count-votes-text{
+    margin-top: 0.3rem;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #222;
+}
+
+.comics-content-count-votes-number{
+    font-size: 3rem;
+    color: #ffa000;
+}
+
+.comics-content-icon-likeDislike{
+    font-size: 2.3em;
+    color: #BDBDBD;
+}
+
+.comics-position-icon{
+    padding-top: 4px;
+}
+
+.comics-content-count-likes{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.comics-content-title-border{
+    border-bottom: 1px solid rgb(238, 238, 238);
+    background-color: initial;
+    color: #333;
+}
+
+.comics-content-items-padding{
+    padding-top: 10px;
+}

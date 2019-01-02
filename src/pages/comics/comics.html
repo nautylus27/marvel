@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar class="comics-header-icon" color="dark">
+    <ion-title>
+      comics
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-grid>
+    <ion-row *ngIf="comics && comics.length != 0 && preload">
+      <single-comic *ngFor="let comic of comics" [comic]="comic"></single-comic>
+      <ion-col col-md-4 col-sm-12 col-12 *ngFor="let comic of comics">
+        <div class="comics-content-shadow">
+          <div class="comics-type-format comics-header-height comics-content-title-border" tooltip="{{comic.title}}"
+            positionV="bottom">
+            <div class="comics-content-align comics-header-icon comics-content-item comics-header-icon">
+              <ion-icon name="{{comic.iconFormat}}"></ion-icon>
+            </div>
+            <div class="comics-content-align comics-text-docs-size comics-content-item">
+              <span class="comics-text-docs comics-text-size">{{comic.title}}</span>
+            </div>
+          </div>
+          <ion-row>
+            <ion-col>
+              <img src="{{comic.pathImage}}">
+            </ion-col>
+            <ion-col>
+              <div>
+                <div class="comics-content-detail">
+                  <div class="comics-content-align comics-content-width">
+                    <ion-icon name="{{comic.iconFormat}}" class="comics-icon-color"></ion-icon>
+                  </div>
+                  <div class="comics-content-align comics-content-item">
+                    <div class="comics-type-format-subtitle">Type format</div>
+                    <div class="comics-type-format-color">{{comic.format}}</div>
+                  </div>
+                </div>
+                <div class="comics-content-detail comics-content-line-bottom comics-content-items-padding">
+                  <ion-row>
+                    <ion-col>
+                      <div class="comics-content-align comics-content-width">
+                        <ion-icon name="logo-usd" class="comics-icon-color"></ion-icon>
+                      </div>
+                      <div class="comics-content-align comics-content-item">
+                        <div class="comics-type-format-subtitle">Price</div>
+                        <div class="comics-type-format-color">{{comic.price}}</div>
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div class="comics-content-align comics-content-width">
+                        <ion-icon name="albums" class="comics-icon-color"></ion-icon>
+                      </div>
+                      <div class="comics-content-align comics-content-item">
+                        <div class="comics-type-format-subtitle">Page</div>
+                        <div class="comics-type-format-color">{{comic.page}}</div>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div class="comics-content-count-likes">
+                    <ion-icon name="heart" class="comics-content-icon-likeDislike"></ion-icon>
+                    <span class="comics-content-count-votes-number">{{comic.countVotes}}</span>
+                    <span class="comics-content-count-votes-text">Votes</span>
+                  </div>
+                </div>
+              </div>
+              <div class="comics-content-border">
+                <div class="comics-content-like-dislike" style="text-align: center">
+                  <div class="comics-content-header comics-content-padding comics-content-like-action comics-content-icon comics-position-icon"
+                    (click)="btnCountVotes(comic, 'like');">
+                    <ion-icon name="thumbs-up" class="comics-style-icon-like"></ion-icon>
+                  </div>
+                  <div class="comics-content-header comics-content-like-action comics-content-icon" (click)="btnCountVotes(comic, 'disliake');">
+                    <ion-icon name="thumbs-down" class="comics-style-icon-dislike"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="comics.length === 0">
+      <ion-col class="comics-message-empty-align">
+        <span>Not found results</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
